@@ -64,12 +64,12 @@ The list of the main techs used in this project.
 
 - [Digital Ocean](https://www.digitalocean.com/products/kubernetes/) 
 
-### Run Locally: KIND
+### Run Locally: KIND (default dev environment)
 
 ```
 ### Install docker, kubectl, etc.
 
-### Instal KIND (default dev environment)
+### Instal KIND 
 
 $ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64 && chmod +x ./kind && sudo mv ./kind /usr/local/bin/kind
 
