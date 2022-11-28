@@ -142,7 +142,7 @@ ingress-srv   <none>   ticketing.dev   localhost   80      42m
 $ grep ticket /etc/hosts
 127.0.0.1 ticketing.dev 
 
-### Open your browser and type  http://ticketing.dev. 
+### Open your browser and type  http://ticketing.dev 
 ```
 Snapshot of Application (see above)
 
