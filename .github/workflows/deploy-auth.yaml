@@ -13,12 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cd auth && docker build -t davarski/ticketing-auth .
-      - uses: mr-smithers-excellent/docker-build-push@v3
-        with:
-          image: davarski/ticketing-auth
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      - run: docker push davarski/ticketing-auth
       - uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
